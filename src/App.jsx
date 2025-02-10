@@ -1,16 +1,16 @@
- import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ScrollToTop from 'react-scroll-to-top';
-import Hero from './components/Hero';
-import RecipeCard from './components/RecipeCard';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
+import Hero from "./components/Hero";
+import RecipeCard from "./components/RecipeCard";
 import Navbar from "./components/Navbar";
-import RecipesPage from './pages/RecipesPage';
-import Categories from './pages/Categories';
-import Latest from './pages/Latest';
+import RecipesPage from "./pages/RecipesPage";
+import Categories from "./pages/Categories";
+import Latest from "./pages/Latest";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
- 
+import Contact from "./components/Contact";
 
 const featuredRecipes = [
   {
@@ -97,12 +97,12 @@ function HomePage() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact"
                     className="hover:text-orange-500 transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -155,22 +155,25 @@ function App() {
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/latest" element={<Latest />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
         </Routes>
 
-  <ScrollToTop 
-  smooth 
-  style={{ 
-    backgroundColor: "#F97316", 
-    borderRadius: "50%", 
-    display: "flex", 
-    justifyContent: "center", 
-    alignItems: "center" 
-  }} 
-  component={<span style={{ fontSize: "24px", color: "white" }}>▲</span>}
-/>
+        <ScrollToTop
+          smooth
+          style={{
+            backgroundColor: "#F97316",
+            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          component={
+            <span style={{ fontSize: "24px", color: "white" }}>▲</span>
+          }
+        />
       </div>
     </Router>
   );
