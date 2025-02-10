@@ -1,15 +1,16 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+ import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-to-top';
 import Hero from './components/Hero';
 import RecipeCard from './components/RecipeCard';
+import Navbar from "./components/Navbar";
 import RecipesPage from './pages/RecipesPage';
 import Categories from './pages/Categories';
 import Latest from './pages/Latest';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
+ 
 
 const featuredRecipes = [
   {
@@ -56,7 +57,6 @@ function HomePage() {
             ))}
           </div>
         </section>
-
         <section className="mt-16">
           <div className="bg-orange-50 rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
@@ -76,7 +76,6 @@ function HomePage() {
           </div>
         </section>
       </main>
-
       <footer className="bg-gray-800 text-white py-12 mt-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,6 +159,18 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
         </Routes>
+
+  <ScrollToTop 
+  smooth 
+  style={{ 
+    backgroundColor: "#F97316", 
+    borderRadius: "50%", 
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center" 
+  }} 
+  component={<span style={{ fontSize: "24px", color: "white" }}>▲</span>}
+/>
       </div>
     </Router>
   );
