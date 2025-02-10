@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import RecipeCard from "./components/RecipeCard";
@@ -64,9 +65,11 @@ function HomePage() {
                 Join our community of food lovers and share your favorite
                 recipes with the world.
               </p>
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
-                Submit Your Recipe
-              </button>
+              <Link to="/submit">
+                <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
+                  Submit Your Recipe
+                </button>
+              </Link>
             </div>
           </div>
         </section>
