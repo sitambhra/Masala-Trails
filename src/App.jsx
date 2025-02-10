@@ -1,35 +1,40 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import RecipeCard from './components/RecipeCard';
-import RecipesPage from './pages/RecipesPage';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import RecipeCard from "./components/RecipeCard";
+import RecipesPage from "./pages/RecipesPage";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const featuredRecipes = [
   {
     title: "Butter Chicken",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image:
+      "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     time: "45 mins",
     servings: 4,
     difficulty: "Medium",
-    cuisine: "Indian"
+    cuisine: "Indian",
   },
   {
     title: "Pad Thai",
-    image: "https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image:
+      "https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     time: "30 mins",
     servings: 2,
     difficulty: "Easy",
-    cuisine: "Thai"
+    cuisine: "Thai",
   },
   {
     title: "Margherita Pizza",
-    image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image:
+      "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     time: "25 mins",
     servings: 4,
     difficulty: "Easy",
-    cuisine: "Italian"
-  }
+    cuisine: "Italian",
+  },
 ];
 
 function HomePage() {
@@ -38,7 +43,9 @@ function HomePage() {
       <Hero />
       <main className="max-w-7xl mx-auto px-4 py-12">
         <section>
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Featured Recipes</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Featured Recipes
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredRecipes.map((recipe, index) => (
               <RecipeCard key={index} {...recipe} />
@@ -53,7 +60,8 @@ function HomePage() {
                 Share Your Recipe
               </h2>
               <p className="text-gray-600 mb-6">
-                Join our community of food lovers and share your favorite recipes with the world.
+                Join our community of food lovers and share your favorite
+                recipes with the world.
               </p>
               <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
                 Submit Your Recipe
@@ -75,10 +83,38 @@ function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-orange-500 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-orange-500 transition-colors"
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-orange-500 transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-orange-500 transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-orange-500 transition-colors"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -112,6 +148,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </Router>
