@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+import { FiArrowUp } from "react-icons/fi";
 import Hero from "./components/Hero";
 import RecipeCard from "./components/RecipeCard";
 import Navbar from "./components/Navbar";
@@ -163,19 +164,20 @@ function App() {
           <Route path="/submit" element={<Submit />} />
         </Routes>
 
-        <ScrollToTop
-          smooth
-          style={{
-            backgroundColor: "#F97316",
-            borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          component={
-            <span style={{ fontSize: "24px", color: "white" }}>▲</span>
-          }
-        />
+        <ScrollToTop 
+        smooth 
+        style={{ 
+          background: "#F97316", 
+          borderRadius: "50%", 
+          display: "flex", 
+          justifyContent: "center", 
+          alignItems: "center",
+          padding: "8px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+          border: "none",
+        }} 
+        component={<FiArrowUp style={{ color: "white", width:"70px", height:"60px" , strokeWidth: "3" }} />} 
+      />
       </div>
     </Router>
   );
