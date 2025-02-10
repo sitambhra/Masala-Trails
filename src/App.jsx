@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 const featuredRecipes = [
   {
@@ -89,12 +90,12 @@ function HomePage() {
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/about"
                     className="hover:text-orange-500 transition-colors"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link
@@ -156,6 +157,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/latest" element={<Latest />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
