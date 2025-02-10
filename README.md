@@ -9,12 +9,6 @@ Masala-Trails is an open-source platform that brings together food lovers, trave
 - User-friendly interface with recipe cards
 - Community engagement through comments and ratings
 
-## 🛠 Tech Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Deployment**: Vercel/Netlify
-
 ## 🚀 Getting Started
 
 ### **1️⃣ Clone the Repository**
@@ -65,6 +59,7 @@ git push origin feature-name
 Now, go to the original repo and create a **Pull Request (PR)** from your fork.
 
  
+⭐ If you like this project, make sure to star the repo!
 
 🚀 **Happy Coding!** If you have any questions, feel free to open an issue. 😃
 
