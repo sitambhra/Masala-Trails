@@ -2,9 +2,9 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 ">
+      <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full dark:bg-gray-700 ">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6 dark:text-white">
           Contact Us
         </h2>
         <form>

@@ -27,18 +27,18 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-        <h2 className="text-2xl font-bold text-center text-gray-800">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 ">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-700 ">
+        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
           Welcome Back
         </h2>
-        <p className="text-gray-500 text-center mb-6">Login to continue</p>
+        <p className="text-gray-500 text-center mb-6 dark:text-white">Login to continue</p>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
 
         <form onSubmit={handleLogin}>
           <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-2 dark:text-white">
               Email
             </label>
             <input
@@ -52,7 +52,7 @@ export default function Login() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
+            <label className="block text-gray-700 font-semibold mb-2 dark:text-white">
               Password
             </label>
             <input
@@ -70,7 +70,7 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center text-gray-600 mt-4 dark:text-white">
           Don't have an account?{" "}
           <Link
             to="/signup"

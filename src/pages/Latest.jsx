@@ -29,13 +29,13 @@ function Latest() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 ">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Latest Recipes</h1>
         
         <div className="space-y-8">
           {latestRecipes.map((recipe) => (
-            <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-gray-800 ">
               <div className="md:flex">
                 <div className="md:flex-shrink-0">
                   <img
@@ -45,7 +45,7 @@ function Latest() {
                   />
                 </div>
                 <div className="p-8">
-                  <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <div className="flex items-center text-sm text-gray-600 mb-2 dark:text-white ">
                     <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                       <line x1="16" y1="2" x2="16" y2="6"/>
@@ -60,8 +60,8 @@ function Latest() {
                     </svg>
                     {recipe.cookTime}
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">{recipe.title}</h2>
-                  <p className="text-gray-600 mb-4">{recipe.description}</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2 dark:text-white">{recipe.title}</h2>
+                  <p className="text-gray-600 mb-4 dark:text-white">{recipe.description}</p>
                   <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700">
                     View Recipe
                   </button>
