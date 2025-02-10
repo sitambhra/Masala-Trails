@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
 import { Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import RecipeCard from "./components/RecipeCard";
-import RecipesPage from "./pages/RecipesPage";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import RecipeCard from './components/RecipeCard';
+import RecipesPage from './pages/RecipesPage';
+import Categories from './pages/Categories';
+import Latest from './pages/Latest';
 import Submit from "./pages/Submit";
 
 const featuredRecipes = [
@@ -152,6 +152,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/latest" element={<Latest />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
