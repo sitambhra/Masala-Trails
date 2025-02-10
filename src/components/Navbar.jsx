@@ -45,30 +45,10 @@ export default function Navbar() {
 
           {/* Navigation Links (Desktop) */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/recipes"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Recipes
-            </Link>
-            <Link
-              to="/categories"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Categories
-            </Link>
-            <Link
-              to="/latest"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Latest
-            </Link>
+            <Link to="" className="text-gray-600 hover:text-orange-500 transition-colors">Home</Link>
+            <Link to="/recipes" className="text-gray-600 hover:text-orange-500 transition-colors">Recipes</Link>
+            <Link to="/Categories"  className="text-gray-600 hover:text-orange-500 transition-colors">Categories</Link>
+            <Link to="/latest" className="text-gray-600 hover:text-orange-500 transition-colors">Latest</Link>
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
@@ -81,13 +61,14 @@ export default function Navbar() {
                 to="/login"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LogIn
+                Login
               </Link>
             )}
-
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
-              Submit Recipe
-            </button>
+            <Link to="/submit">
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                Submit Recipe
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -130,13 +111,14 @@ export default function Navbar() {
                 to="/login"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LogIn
+                Login
               </Link>
             )}
-
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
-              Submit Recipe
-            </button>
+            <Link to="/submit">
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                Submit Recipe
+              </button>
+            </Link>
           </div>
         )}
       </div>

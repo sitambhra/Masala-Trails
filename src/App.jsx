@@ -1,12 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+ import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
 import Hero from './components/Hero';
 import RecipeCard from './components/RecipeCard';
 import Navbar from "./components/Navbar";
 import RecipesPage from './pages/RecipesPage';
+import Categories from './pages/Categories';
+import Latest from './pages/Latest';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Submit from "./pages/Submit";
+ 
 
 const featuredRecipes = [
   {
@@ -63,9 +67,11 @@ function HomePage() {
                 Join our community of food lovers and share your favorite
                 recipes with the world.
               </p>
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
-                Submit Your Recipe
-              </button>
+              <Link to="/submit">
+                <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
+                  Submit Your Recipe
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -147,8 +153,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/latest" element={<Latest />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/submit" element={<Submit />} />
         </Routes>
 
   <ScrollToTop 
