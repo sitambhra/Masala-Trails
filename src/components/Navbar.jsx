@@ -45,30 +45,10 @@ export default function Navbar() {
 
           {/* Navigation Links (Desktop) */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/recipes"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Recipes
-            </Link>
-            <Link
-              to="/categories"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Categories
-            </Link>
-            <Link
-              to="/latest"
-              className="text-gray-600 hover:text-orange-500 transition-colors"
-            >
-              Latest
-            </Link>
+            <Link to="" className="text-gray-600 hover:text-orange-500 transition-colors">Home</Link>
+            <Link to="/recipes" className="text-gray-600 hover:text-orange-500 transition-colors">Recipes</Link>
+            <Link to="/Categories"  className="text-gray-600 hover:text-orange-500 transition-colors">Categories</Link>
+            <Link to="/latest" className="text-gray-600 hover:text-orange-500 transition-colors">Latest</Link>
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
@@ -81,7 +61,7 @@ export default function Navbar() {
                 to="/login"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LogIn
+                Login
               </Link>
             )}
             <Link to="/submit">
@@ -131,7 +111,7 @@ export default function Navbar() {
                 to="/login"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LogIn
+                Login
               </Link>
             )}
             <Link to="/submit">
