@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { UtensilsCrossed, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const authStatus = localStorage.getItem("isAuthenticated");
+    setIsAuthenticated(authStatus === "true");
+  }, []);
+
+  // Logout function
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated");
+    setIsAuthenticated(false);
+    alert("Logged out successfully!");
+    navigate("/login"); // Redirect to login page after logout
+  };
 
   return (
     <nav className="bg-white shadow-md">
@@ -55,6 +69,22 @@ export default function Navbar() {
             >
               Latest
             </Link>
+            {isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="text-gray-600 hover:text-red-500 transition-colors"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
+                LogIn
+              </Link>
+            )}
+
             <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
               Submit Recipe
             </button>
@@ -88,6 +118,22 @@ export default function Navbar() {
             >
               Latest
             </Link>
+            {isAuthenticated ? (
+              <button
+                onClick={handleLogout}
+                className="text-gray-600 hover:text-red-500 transition-colors"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
+                LogIn
+              </Link>
+            )}
+
             <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
               Submit Recipe
             </button>
