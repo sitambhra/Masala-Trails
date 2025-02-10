@@ -61,7 +61,7 @@ export default function Navbar() {
                 to="/login"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LogIn
+                Login
               </Link>
             )}
             <Link to="/submit">
