@@ -12,6 +12,7 @@ import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import PrivacyPolicy from "./components/Privacy";
 
 const featuredRecipes = [
   {
@@ -106,12 +107,12 @@ function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/privacy"
                     className="hover:text-orange-500 transition-colors"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -161,6 +162,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
 
         <ScrollToTop
