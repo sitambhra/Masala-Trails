@@ -11,7 +11,6 @@ export default function Hero() {
     const searchText = e.target.value.toLowerCase();
     setQuery(searchText);
 
-    // Filter recipes based on input
     if (searchText.trim() === "") {
       setFilteredRecipes([]);
     } else {
@@ -20,6 +19,11 @@ export default function Hero() {
       );
       setFilteredRecipes(results);
     }
+  };
+
+  const handleSuggestionClick = (recipe) => {
+    setQuery(recipe); // Set selected recipe in search bar
+    setFilteredRecipes([]); // Hide suggestions after selection
   };
 
   return (
@@ -60,17 +64,17 @@ export default function Hero() {
           </div>
 
           {/* Search Results */}
-          {query && (
+          {query && filteredRecipes.length > 0 && (
             <div className="mt-4 bg-white shadow-lg rounded-lg p-4 text-left max-w-xl mx-auto">
-              {filteredRecipes.length > 0 ? (
-                filteredRecipes.map((recipe, index) => (
-                  <div key={index} className="p-2 border-b last:border-0">
-                    {recipe}
-                  </div>
-                ))
-              ) : (
-                <p className="text-gray-500">No results found.</p>
-              )}
+              {filteredRecipes.map((recipe, index) => (
+                <div
+                  key={index}
+                  className="p-2 border-b last:border-0 cursor-pointer hover:bg-orange-100 transition"
+                  onClick={() => handleSuggestionClick(recipe)}
+                >
+                  {recipe}
+                </div>
+              ))}
             </div>
           )}
         </div>
