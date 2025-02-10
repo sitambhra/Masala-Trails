@@ -84,10 +84,11 @@ export default function Navbar() {
                 LogIn
               </Link>
             )}
-
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
-              Submit Recipe
-            </button>
+            <Link to="/submit">
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                Submit Recipe
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -133,10 +134,11 @@ export default function Navbar() {
                 LogIn
               </Link>
             )}
-
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
-              Submit Recipe
-            </button>
+            <Link to="/submit">
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                Submit Recipe
+              </button>
+            </Link>
           </div>
         )}
       </div>

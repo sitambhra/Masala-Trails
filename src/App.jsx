@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import RecipeCard from "./components/RecipeCard";
 import RecipesPage from "./pages/RecipesPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Submit from "./pages/Submit";
 
 const featuredRecipes = [
   {
@@ -63,9 +65,11 @@ function HomePage() {
                 Join our community of food lovers and share your favorite
                 recipes with the world.
               </p>
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
-                Submit Your Recipe
-              </button>
+              <Link to="/submit">
+                <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
+                  Submit Your Recipe
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -150,6 +154,7 @@ function App() {
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/submit" element={<Submit />} />
         </Routes>
       </div>
     </Router>
