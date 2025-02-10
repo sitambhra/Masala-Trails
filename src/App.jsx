@@ -6,6 +6,7 @@ import RecipeCard from "./components/RecipeCard";
 import RecipesPage from "./pages/RecipesPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import ScrollToTopButton from "./components/ScrollToTopButton.jsx"; // Import the component
 
 const featuredRecipes = [
   {
@@ -136,6 +137,9 @@ function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
     </>
   );
 }
