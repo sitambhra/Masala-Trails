@@ -5,8 +5,6 @@ const categories = [
   { name: "Chinese", image: "/images/chinese.jpeg" },
   { name: "Italian", image: "/images/italian.jpg" },
   { name: "Mexican", image: "/images/mexican.jpeg" },
-  { name: "Mediterranean", image: "/images/Mediterranean.jpeg" },
-  { name: "American", image: "/images/American.jpeg" },
   { name: "Desserts", image: "/images/desserts.jpeg" },
   { name: "Drinks", image: "/images/drinks.jpeg" },
 ];
@@ -19,7 +17,7 @@ export default function Categories() {
         {categories.map((category, index) => (
           <div
             key={index}
-            className="relative w-[300px] h-[300px] rounded-lg shadow-lg overflow-hidden group cursor-pointer bg-gray-200"
+            className="relative w-[400px] h-[400px] rounded-lg shadow-lg overflow-hidden group cursor-pointer bg-gray-200"
           >
             <img
               src={category.image}
