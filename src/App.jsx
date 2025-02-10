@@ -7,6 +7,8 @@ import RecipeCard from './components/RecipeCard';
 import RecipesPage from './pages/RecipesPage';
 import Categories from './pages/Categories';
 import Latest from './pages/Latest';
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 
 const featuredRecipes = [
