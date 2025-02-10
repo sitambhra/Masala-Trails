@@ -1,10 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "react-scroll-to-top";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-to-top';
+import Hero from './components/Hero';
+import RecipeCard from './components/RecipeCard';
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import RecipeCard from "./components/RecipeCard";
-import RecipesPage from "./pages/RecipesPage";
+import RecipesPage from './pages/RecipesPage';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
