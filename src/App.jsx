@@ -8,6 +8,7 @@ import RecipesPage from "./pages/RecipesPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
+import Categories from "./pages/Categories";
 
 const featuredRecipes = [
   {
@@ -155,6 +156,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
     </Router>
