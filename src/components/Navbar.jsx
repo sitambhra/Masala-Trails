@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/Home" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <UtensilsCrossed className="h-8 w-8 text-orange-500" />
             <span className="text-xl font-bold text-gray-800 dark:text-white ">
               Masala Trails
