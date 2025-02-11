@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+import { FiArrowUp } from "react-icons/fi";
 import Hero from "./components/Hero";
 import RecipeCard from "./components/RecipeCard";
 import Navbar from "./components/Navbar";
@@ -12,8 +13,9 @@ import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import DarkMode from "./components/DarkMode";
-
+ import DarkMode from "./components/DarkMode";
+ import PrivacyPolicy from "./components/Privacy";
+ 
 const featuredRecipes = [
   {
     title: "Butter Chicken",
@@ -112,12 +114,12 @@ function HomePage() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/privacy"
                     className="hover:text-orange-500 transition-colors"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -167,21 +169,23 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
 
-        <ScrollToTop
-          smooth
-          style={{
-            backgroundColor: "#F97316",
-            borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          component={
-            <span style={{ fontSize: "24px", color: "white" }}>▲</span>
-          }
-        />
+        <ScrollToTop 
+        smooth 
+        style={{ 
+          background: "#F97316", 
+          borderRadius: "50%", 
+          display: "flex", 
+          justifyContent: "center", 
+          alignItems: "center",
+          padding: "8px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+          border: "none",
+        }} 
+        component={<FiArrowUp style={{ color: "white", width:"70px", height:"60px" , strokeWidth: "3" }} />} 
+      />
       </div>
     </Router>
   );
