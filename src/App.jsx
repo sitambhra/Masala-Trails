@@ -13,6 +13,7 @@ import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import PrivacyPolicy from "./components/Privacy";
 
 const featuredRecipes = [
   {
