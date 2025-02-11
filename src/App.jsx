@@ -13,9 +13,8 @@ import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
- import DarkMode from "./components/DarkMode";
- import PrivacyPolicy from "./components/Privacy";
- 
+// import DarkMode from "./components/DarkMode";
+
 const featuredRecipes = [
   {
     title: "Butter Chicken",
@@ -61,9 +60,9 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="absolute top-4 right-5">
+          {/* <div className="absolute top-4 right-5">
             <DarkMode />
-          </div>
+          </div> */}
 
         </section>
         <section className="mt-16">

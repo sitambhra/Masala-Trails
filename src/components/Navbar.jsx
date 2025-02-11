@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { UtensilsCrossed, Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import DarkMode from "./DarkMode";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Navbar() {
           </button>
 
           {/* Navigation Links (Desktop) */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">           
             <Link to="" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Home</Link>
             <Link to="/recipes" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Recipes</Link>
             <Link to="/Categories"  className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Categories</Link>
@@ -70,6 +71,11 @@ export default function Navbar() {
               </button>
             </Link>
           </div>
+
+          <div className="ml-10">
+          <DarkMode/>
+          </div>
+            
         </div>
 
         {/* Mobile Menu */}
@@ -119,6 +125,10 @@ export default function Navbar() {
                 Submit Recipe
               </button>
             </Link>
+
+            <div className="flex justify-end pt-4">
+              <DarkMode/>
+            </div>
           </div>
         )}
       </div>
