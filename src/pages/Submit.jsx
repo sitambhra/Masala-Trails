@@ -38,7 +38,7 @@ export default function Submit() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
       <h2 className="text-3xl font-bold mb-6 text-center">
         Submit Your Recipe
       </h2>

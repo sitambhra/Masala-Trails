@@ -2,12 +2,12 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6">
-      <div className="max-w-4xl bg-white p-8 rounded-2xl shadow-2xl">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
+    <div className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6 dark:bg-gray-900  ">
+      <div className="max-w-4xl bg-white p-8 rounded-2xl shadow-2xl dark:bg-gray-900">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4 dark:text-white">
           About Our Recipe World
         </h1>
-        <p className="text-lg text-gray-700 text-center mb-6">
+        <p className="text-lg text-gray-700 text-center mb-6 dark:text-white ">
           Welcome to our culinary paradise, where we bring you the best recipes
           from different countries! Explore diverse flavors, rich traditions,
           and easy-to-follow guides to make every meal special.
