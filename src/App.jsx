@@ -13,7 +13,6 @@ import Signup from "./pages/Signup";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
-// import DarkMode from "./components/DarkMode";
 
 const featuredRecipes = [
   {
@@ -59,10 +58,6 @@ function HomePage() {
               <RecipeCard key={index} {...recipe} />
             ))}
           </div>
-
-          {/* <div className="absolute top-4 right-5">
-            <DarkMode />
-          </div> */}
 
         </section>
         <section className="mt-16">
