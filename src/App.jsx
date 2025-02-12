@@ -10,6 +10,7 @@ import Categories from "./pages/Categories";
 import Latest from "./pages/Latest";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Faq from "./pages/Faq";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -99,6 +100,7 @@ function App() {
           <Route path="/latest" element={<Latest />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/faq" element={<Faq />} />

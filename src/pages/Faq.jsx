@@ -16,6 +16,7 @@ const faqData = [
   {
     question: "Can I submit my own recipes?",
     answer: "Sure,you always can!",
+    answer: "Sure, you always can!",
   },
   {
     question: "Do I need special ingredients for international recipes?",
@@ -73,6 +74,26 @@ const Faq = () => {
           >
             {item.answer}
           </div>
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
+      <h2 className="text-center text-3xl font-bold text-gray-800 mb-6">
+        Frequently Asked Questions
+      </h2>
+      {faqData.map((item, index) => (
+        <div key={index} className="border-b border-gray-300 py-4">
+          <div
+            className="flex justify-between items-center text-lg font-semibold text-black-600 cursor-pointer hover:text-blue-800 transition duration-300"
+            onClick={() => handleToggle(index)}
+          >
+            {item.question}
+            <span className="text-xl transform transition-transform duration-300">
+              {activeIndex === index ? "▲" : "▼"}
+            </span>
+          </div>
+          {activeIndex === index && (
+            <div className="mt-2 text-gray-700 text-base leading-relaxed">
+              {item.answer}
+            </div>
+          )}
         </div>
       ))}
     </div>
