@@ -125,10 +125,6 @@ export default function Navbar() {
                 Submit Recipe
               </button>
             </Link>
-
-            <div className="flex justify-end pt-4">
-              <DarkMode/>
-            </div>
           </div>
         )}
       </div>
