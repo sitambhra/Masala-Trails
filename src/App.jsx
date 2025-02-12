@@ -10,6 +10,7 @@ import Categories from "./pages/Categories";
 import Latest from "./pages/Latest";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Faq from "./pages/Faq";
 import Submit from "./pages/Submit";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -60,7 +61,6 @@ function HomePage() {
               <RecipeCard key={index} {...recipe} />
             ))}
           </div>
-
         </section>
         <section className="mt-16">
           <div className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
@@ -97,26 +97,36 @@ function App() {
           <Route path="/latest" element={<Latest />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
-        <ScrollToTop 
-        smooth 
-        style={{ 
-          background: "#F97316", 
-          borderRadius: "50%", 
-          display: "flex", 
-          justifyContent: "center", 
-          alignItems: "center",
-          padding: "8px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-          border: "none",
-        }} 
-        component={<FiArrowUp style={{ color: "white", width:"70px", height:"60px" , strokeWidth: "3" }} />} 
-      />
+        <ScrollToTop
+          smooth
+          style={{
+            background: "#F97316",
+            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "8px",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+            border: "none",
+          }}
+          component={
+            <FiArrowUp
+              style={{
+                color: "white",
+                width: "70px",
+                height: "60px",
+                strokeWidth: "3",
+              }}
+            />
+          }
+        />
       </div>
     </Router>
   );
