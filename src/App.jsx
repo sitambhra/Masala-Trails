@@ -16,6 +16,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import PrivacyPolicy from "./components/Privacy";
 import Footer from "./components/Footer";
+import Testimonial from "./pages/Testimonial";
 
 const featuredRecipes = [
   {
@@ -80,6 +81,7 @@ function HomePage() {
             </div>
           </div>
         </section>
+        <Testimonial />
       </main>
     </>
   );
