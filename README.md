@@ -58,6 +58,7 @@ git push origin feature-name
 ```
 Now, go to the original repo and create a **Pull Request (PR)** from your fork.
 
+ View Project: https://masala-trails.vercel.app/
  
 ⭐ If you like this project, make sure to star the repo!
 
