@@ -1,35 +1,45 @@
 import React, { useState, useEffect } from "react";
+import man from "../assets/man.jpeg";
+import man2 from "../assets/man2.jpeg";
+import woman1 from "../assets/woman1.jpeg";
+import woman3 from "../assets/woman3.jpeg";
+import chef1 from "../assets/chef1.jpeg";
 
 const testimonials = [
   {
     id: 1,
     name: "John Doe",
     review: "Amazing recipes! I tried the pizza, and it was fantastic.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    image: man,
+    rating: 5,
   },
   {
     id: 2,
     name: "Jane Smith",
     review: "Love the variety of dishes! Great instructions as well.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    image: man2,
+    rating: 4,
   },
   {
     id: 3,
     name: "Emily Johnson",
     review: "The desserts are to die for! My family loved them.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    image: woman1,
+    rating: 5,
   },
   {
     id: 4,
     name: "Michael Brown",
     review: "Super easy-to-follow recipes. Made my first cake today!",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    image: chef1,
+    rating: 3,
   },
   {
     id: 5,
     name: "Sophia Williams",
     review: "Tried the Asian cuisine section, and it was incredible!",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
+    image: woman3,
+    rating: 4,
   },
 ];
 
@@ -59,38 +69,52 @@ const Testimonial = () => {
     );
   };
 
+  // Function to generate star rating
+  const renderStars = (rating) => "⭐".repeat(rating);
+
   return (
-    <div className="flex items-center justify-center w-full my-12 relative">
-      <button
-        className="bg-gradient-to-r from-yellow-400 to-orange-300 text-black text-2xl p-3 rounded-full transition duration-300 hover:from-yellow-400 hover:to-red-400 mr-4"
-        onClick={prevTestimonial}
-      >
-        &lt;
-      </button>
+    <div className="flex flex-col items-center justify-center w-full my-12  py-12">
+      {/* Added Section Heading */}
+      <h2 className="text-3xl font-bold text-orange-700 mb-6">
+        What Our Customers Say
+      </h2>
+      <div className="flex items-center w-4/5 justify-center">
+        <button
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          onClick={nextTestimonial}
+        >
+          &lt;
+        </button>
 
-      <div className="flex overflow-hidden gap-4 w-3/5 justify-center">
-        {testimonials.slice(index, index + visibleCount).map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="bg-gradient-to-br from-yellow-400 to-orange-200 p-6 rounded-lg shadow-lg text-left w-72 h-72 flex flex-col justify-center relative"
-          >
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="w-12 h-12 rounded-full absolute top-2 left-2"
-            />
-            <h3 className="mt-12 font-bold text-lg pl-2">{testimonial.name}</h3>
-            <p className="pl-2">{testimonial.review}</p>
-          </div>
-        ))}
+        <div className="flex gap-6 justify-center w-full overflow-hidden">
+          {testimonials
+            .slice(index, index + visibleCount)
+            .map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-[250px] h-[300px] flex flex-col justify-center items-center"
+              >
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-20 h-20 rounded-full mb-2"
+                />
+                <p className="text-yellow-500 text-xl">
+                  {renderStars(testimonial.rating)}
+                </p>
+                <h3 className="text-lg font-bold">{testimonial.name}</h3>
+                <p className="text-gray-600">{testimonial.review}</p>
+              </div>
+            ))}
+        </div>
+
+        <button
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          onClick={nextTestimonial}
+        >
+          &gt;
+        </button>
       </div>
-
-      <button
-        className="bg-gradient-to-r from-yellow-400 to-orange-300 text-black text-2xl p-3 rounded-full transition duration-300 hover:from-yellow-400 hover:to-red-400 ml-4"
-        onClick={nextTestimonial}
-      >
-        &gt;
-      </button>
     </div>
   );
 };
