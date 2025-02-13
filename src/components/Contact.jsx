@@ -1,18 +1,51 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const refForm = useRef(null);
+  const usernameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+  const [alertVisible, setAlertVisible] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        refForm.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          alert("Message Sent Successfully");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    if (refForm.current) {
+      refForm.current.reset();
+    }
+  };
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 ">
       <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full dark:bg-gray-700 ">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6 dark:text-white">
           Contact Us
         </h2>
-        <form>
+        <form ref={refForm} onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
               Name
             </label>
             <input
+              name="username"
+              ref={usernameRef}
               type="text"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your name"
@@ -23,6 +56,8 @@ const Contact = () => {
               Email
             </label>
             <input
+              ref={emailRef}
+              name="email"
               type="email"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your email"
@@ -33,6 +68,8 @@ const Contact = () => {
               Message
             </label>
             <textarea
+              ref={messageRef}
+              name="message"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               rows="4"
               placeholder="Enter your message"
