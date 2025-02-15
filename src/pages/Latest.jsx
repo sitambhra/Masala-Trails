@@ -39,10 +39,10 @@ function Latest() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Latest Recipes</h1>
         
-        <div data-aos="fade-right" className="space-y-8">
+        <div data-aos="fade-up" className="space-y-8">
           {latestRecipes.map((recipe) => (
             <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow dark:bg-gray-800 ">
-              <div data-aos="fade-left" className="md:flex">
+              <div data-aos="fade-up" className="md:flex">
                 <div className="md:flex-shrink-0">
                   <img
                     className="h-48 w-full md:w-64 object-cover"
@@ -50,7 +50,7 @@ function Latest() {
                     alt={recipe.title}
                   />
                 </div>
-                <div data-aos="fade-right" className="p-8">
+                <div data-aos="fade-up" className="p-8">
                   <div className="flex items-center text-sm text-gray-600 mb-2 dark:text-white ">
                     <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>

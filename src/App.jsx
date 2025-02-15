@@ -59,7 +59,7 @@ function HomePage() {
       <Hero />
       <main className="max-w-7xl mx-auto px-4 py-12 dark:bg-gray-900">
         <section>
-          <h2 data-aos="fade-right" className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
+          <h2 data-aos="fade-up" className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
             Featured Recipes
           </h2>
           <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,7 +69,7 @@ function HomePage() {
           </div>
         </section>
         <section className="mt-16">
-          <div data-aos="fade-right" className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
+          <div data-aos="fade-up" className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
             <div className="max-w-3xl mx-auto text-center">
               <h2 data-aos="fade-up" className="text-3xl font-bold text-gray-800 mb-4 dark:text-white ">
                 Share Your Recipe

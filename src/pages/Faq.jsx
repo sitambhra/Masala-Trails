@@ -57,11 +57,11 @@ const Faq = () => {
 
   return (
     <div data-aos="fade-up" className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
-      <h2 data-aos="fade-right" className="text-center text-3xl font-bold text-gray-800 mb-6">
+      <h2 data-aos="fade-up" className="text-center text-3xl font-bold text-gray-800 mb-6">
         Frequently Asked Questions
       </h2>
       {faqData.map((item, index) => (
-        <div data-aos="fade-right" key={index} className="border-b border-gray-300 py-4">
+        <div data-aos="fade-up" key={index} className="border-b border-gray-300 py-4">
           <div data-aos="fade-up"
             className="flex justify-between items-center text-lg font-semibold text-black-600 cursor-pointer hover:text-blue-800 transition duration-300"
             onClick={() => handleToggle(index)}

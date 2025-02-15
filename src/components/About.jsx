@@ -9,15 +9,15 @@ const About = () => {
   return (
     <div data-aos="fade-up" className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6 dark:bg-gray-900  ">
       <div data-aos="fade-up" className="max-w-4xl bg-white p-8 rounded-2xl shadow-2xl dark:bg-gray-900">
-        <h1 data-aos="fade-down"  className="text-4xl font-bold text-center text-gray-800 mb-4 dark:text-white">
+        <h1 data-aos="fade-up"  className="text-4xl font-bold text-center text-gray-800 mb-4 dark:text-white">
           About Our Recipe World
         </h1>
-        <p data-aos="fade-down" className="text-lg text-gray-700 text-center mb-6 dark:text-white ">
+        <p data-aos="fade-up" className="text-lg text-gray-700 text-center mb-6 dark:text-white ">
           Welcome to our culinary paradise, where we bring you the best recipes
           from different countries! Explore diverse flavors, rich traditions,
           and easy-to-follow guides to make every meal special.
         </p>
-        <div data-aos="fade-right" className="grid md:grid-cols-2 gap-6">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-6">
           <div className="bg-orange-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-orange-700 mb-2">
               Our Mission
@@ -27,7 +27,7 @@ const About = () => {
               easy-to-make recipes from around the world.
             </p>
           </div>
-          <div data-aos="fade-left" className="bg-yellow-100 p-6 rounded-lg shadow-lg">
+          <div data-aos="fade-up" className="bg-yellow-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-yellow-700 mb-2">
               Why Choose Us?
             </h2>

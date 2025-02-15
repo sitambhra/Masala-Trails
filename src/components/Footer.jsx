@@ -7,7 +7,7 @@ export default function Footer() {
       AOS.init({ duration: 1000, once: false });
     }, []);
   return (
-    <footer data-aos="fade-right" className="bg-gray-800 text-white py-12 mt-16">
+    <footer data-aos="fade-up" className="bg-gray-800 text-white py-12 mt-16">
       <div data-aos="fade-up" className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

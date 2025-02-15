@@ -47,15 +47,15 @@ export default function Hero() {
       </div>
 
       <div data-aos="fade-up" className="relative z-10 text-center px-4">
-        <h1 data-aos="fade-right" className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <h1 data-aos="fade-up" className="text-5xl md:text-6xl font-bold text-white mb-6">
           Masala Trails
         </h1>
-        <p data-aos="fade-left" className="text-xl text-white mb-8 max-w-2xl mx-auto">
+        <p data-aos="fade-up" className="text-xl text-white mb-8 max-w-2xl mx-auto">
           Discover authentic recipes from around the world, crafted with love
           and tradition.
         </p>
 
-        <div data-aos="fade-right" className="max-w-xl mx-auto">
+        <div data-aos="fade-up" className="max-w-xl mx-auto">
           <div className="relative">
             <input
               type="text"

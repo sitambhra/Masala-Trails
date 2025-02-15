@@ -81,7 +81,7 @@ const Testimonial = () => {
   return (
     <div data-aos="fade-up" className="flex flex-col items-center justify-center w-full my-12  py-12">
       {/* Added Section Heading */}
-      <h2 data-aos="fade-left" className="text-3xl font-bold text-orange-700 mb-6">
+      <h2 data-aos="fade-up" className="text-3xl font-bold text-orange-700 mb-6">
         What Our Customers Say
       </h2>
       <div className="flex items-center w-4/5 justify-center">
@@ -92,7 +92,7 @@ const Testimonial = () => {
           &lt;
         </button>
 
-        <div data-aos="fade-left" className="flex gap-6 justify-center w-full overflow-hidden">
+        <div data-aos="fade-up" className="flex gap-6 justify-center w-full overflow-hidden">
           {testimonials
             .slice(index, index + visibleCount)
             .map((testimonial) => (

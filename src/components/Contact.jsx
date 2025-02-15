@@ -41,11 +41,11 @@ const Contact = () => {
   return (
     <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 ">
       <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full dark:bg-gray-700 ">
-        <h2 data-aos="fade-down" className="text-2xl font-bold text-center text-gray-800 mb-6 dark:text-white">
+        <h2 data-aos="fade-up" className="text-2xl font-bold text-center text-gray-800 mb-6 dark:text-white">
           Contact Us
         </h2>
         <form ref={refForm} onSubmit={handleSubmit}>
-          <div data-aos="fade-right" className="mb-4">
+          <div data-aos="fade-up" className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
               Name
             </label>
@@ -57,7 +57,7 @@ const Contact = () => {
               placeholder="Enter your name"
             />
           </div>
-          <div data-aos="fade-left" className="mb-4">
+          <div data-aos="fade-up" className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
               Email
             </label>
@@ -69,7 +69,7 @@ const Contact = () => {
               placeholder="Enter your email"
             />
           </div>
-          <div data-aos="fade-right" className="mb-4">
+          <div data-aos="fade-up" className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
               Message
             </label>

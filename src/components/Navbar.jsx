@@ -27,9 +27,9 @@ export default function Navbar() {
       }, []);
 
   return (
-    <nav data-aos="fade-down" className="bg-white shadow-md dark:bg-gray-900">
+    <nav data-aos="fade-up" className="bg-white shadow-md dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
-        <div data-aos="fade-right" className="flex justify-between items-center h-16">
+        <div data-aos="fade-up" className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <UtensilsCrossed className="h-8 w-8 text-orange-500" />
@@ -51,7 +51,7 @@ export default function Navbar() {
           </button>
 
           {/* Navigation Links (Desktop) */}
-          <div data-aos="fade-left" className="hidden md:flex items-center space-x-8 ml-auto">           
+          <div data-aos="fade-up" className="hidden md:flex items-center space-x-8 ml-auto">           
             <Link to="" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Home</Link>
             <Link to="/recipes" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Recipes</Link>
             <Link to="/Categories"  className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Categories</Link>

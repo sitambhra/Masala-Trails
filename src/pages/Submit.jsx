@@ -44,13 +44,13 @@ export default function Submit() {
     }, []);
 
   return (
-    <div data-aos="fade-left" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
+    <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center">
         Submit Your Recipe
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Recipe Name */}
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Recipe Name:</label>
           <input
             type="text"
@@ -63,7 +63,7 @@ export default function Submit() {
         </div>
 
         {/* Ingredients */}
-        <div data-aos="fade-left">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Ingredients:</label>
           <textarea
             name="ingredients"
@@ -76,7 +76,7 @@ export default function Submit() {
         </div>
 
         {/* Cooking Time */}
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Cooking Time (mins):</label>
           <input
             type="number"
@@ -89,7 +89,7 @@ export default function Submit() {
         </div>
 
         {/* Servings */}
-        <div data-aos="fade-left">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Servings:</label>
           <input
             type="number"
@@ -102,7 +102,7 @@ export default function Submit() {
         </div>
 
         {/* Difficulty */}
-        <div data-aos="fade-right">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Difficulty:</label>
           <select
             name="difficulty"
@@ -117,7 +117,7 @@ export default function Submit() {
         </div>
 
         {/* Image Upload */}
-        <div data-aos="fade-left">
+        <div data-aos="fade-up">
           <label className="block font-semibold">Upload Image:</label>
           <input
             type="file"
