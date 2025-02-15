@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-      AOS.init({ duration: 1000, once: false });
+      AOS.init({ duration: 600, once: false });
     }, []);
   return (
     <div data-aos="fade-up" className="min-h-screen bg-gradient-to-r from-orange-100 to-yellow-200 text-gray-800 py-10 px-5 md:px-20">

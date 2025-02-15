@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-      AOS.init({ duration: 1000, once: false });
+      AOS.init({ duration: 600, once: false });
     }, []);
   return (
     <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 ">

@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 600, once: false });
   }, []);
 
   return (

@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 export default function RecipeCard({ title, image, time, servings, difficulty, cuisine }) {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 600, once: false });
   }, []);
   return (
     <div data-aos="fade-up" className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">

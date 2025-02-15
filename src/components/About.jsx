@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-      AOS.init({ duration: 1000, once: false });
+      AOS.init({ duration: 600, once: false });
     }, []);
   return (
     <div data-aos="fade-up" className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6 dark:bg-gray-900  ">

@@ -10,7 +10,7 @@ const recipes = [
 
 const Recipes = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 600, once: false });
   }, []);
   return (
     <div data-aos="fade-up" className="container mx-auto mt-10">
