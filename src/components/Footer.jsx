@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function Footer() {
+  useEffect(() => {
+      AOS.init({ duration: 1000, once: false });
+    }, []);
   return (
-    <footer className="bg-gray-800 text-white py-12 mt-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer data-aos="fade-right" className="bg-gray-800 text-white py-12 mt-16">
+      <div data-aos="fade-up" className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Masala Trails</h3>

@@ -4,6 +4,8 @@ import man2 from "../assets/man2.jpeg";
 import woman1 from "../assets/woman1.jpeg";
 import woman3 from "../assets/woman3.jpeg";
 import chef1 from "../assets/chef1.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -72,10 +74,14 @@ const Testimonial = () => {
   // Function to generate star rating
   const renderStars = (rating) => "⭐".repeat(rating);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
   return (
-    <div className="flex flex-col items-center justify-center w-full my-12  py-12">
+    <div data-aos="fade-up" className="flex flex-col items-center justify-center w-full my-12  py-12">
       {/* Added Section Heading */}
-      <h2 className="text-3xl font-bold text-orange-700 mb-6">
+      <h2 data-aos="fade-left" className="text-3xl font-bold text-orange-700 mb-6">
         What Our Customers Say
       </h2>
       <div className="flex items-center w-4/5 justify-center">
@@ -86,7 +92,7 @@ const Testimonial = () => {
           &lt;
         </button>
 
-        <div className="flex gap-6 justify-center w-full overflow-hidden">
+        <div data-aos="fade-left" className="flex gap-6 justify-center w-full overflow-hidden">
           {testimonials
             .slice(index, index + visibleCount)
             .map((testimonial) => (

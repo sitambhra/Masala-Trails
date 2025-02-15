@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Submit() {
   const [formData, setFormData] = useState({
@@ -37,14 +39,18 @@ export default function Submit() {
     });
   };
 
+  useEffect(() => {
+      AOS.init({ duration: 1000, once: false });
+    }, []);
+
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
-      <h2 className="text-3xl font-bold mb-6 text-center">
+    <div data-aos="fade-left" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
+      <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center">
         Submit Your Recipe
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Recipe Name */}
-        <div>
+        <div data-aos="fade-right">
           <label className="block font-semibold">Recipe Name:</label>
           <input
             type="text"
@@ -57,7 +63,7 @@ export default function Submit() {
         </div>
 
         {/* Ingredients */}
-        <div>
+        <div data-aos="fade-left">
           <label className="block font-semibold">Ingredients:</label>
           <textarea
             name="ingredients"
@@ -70,7 +76,7 @@ export default function Submit() {
         </div>
 
         {/* Cooking Time */}
-        <div>
+        <div data-aos="fade-right">
           <label className="block font-semibold">Cooking Time (mins):</label>
           <input
             type="number"
@@ -83,7 +89,7 @@ export default function Submit() {
         </div>
 
         {/* Servings */}
-        <div>
+        <div data-aos="fade-left">
           <label className="block font-semibold">Servings:</label>
           <input
             type="number"
@@ -96,7 +102,7 @@ export default function Submit() {
         </div>
 
         {/* Difficulty */}
-        <div>
+        <div data-aos="fade-right">
           <label className="block font-semibold">Difficulty:</label>
           <select
             name="difficulty"
@@ -111,7 +117,7 @@ export default function Submit() {
         </div>
 
         {/* Image Upload */}
-        <div>
+        <div data-aos="fade-left">
           <label className="block font-semibold">Upload Image:</label>
           <input
             type="file"
@@ -122,7 +128,7 @@ export default function Submit() {
         </div>
 
         {/* Submit Button */}
-        <div className="text-center">
+        <div data-aos="fade-up" className="text-center">
           <button
             type="submit"
             className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition duration-200"
