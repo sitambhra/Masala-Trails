@@ -50,12 +50,15 @@ const Faq = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10">
-      <h2 className="text-center text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+    <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10 mb-10">
+      <h2 className="text-center text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 ">
         Frequently Asked Questions
       </h2>
       {faqData.map((item, index) => (
-        <div key={index} className="border-b border-gray-300 dark:border-gray-600 py-4">
+        <div
+          key={index}
+          className="border-b border-gray-300 dark:border-gray-600 py-4 "
+        >
           <div
             className="flex justify-between items-center text-lg font-semibold text-gray-800 dark:text-gray-100 cursor-pointer hover:text-blue-800 dark:hover:text-blue-400 transition duration-300"
             onClick={() => handleToggle(index)}

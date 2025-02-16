@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-r from-orange-400 to-yellow-300 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-r from-orange-400 to-yellow-300 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-900">
       <div className="max-w-4xl bg-white p-8 rounded-2xl shadow-2xl dark:bg-gray-800">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-4 dark:text-white">
           About Our Recipe World
