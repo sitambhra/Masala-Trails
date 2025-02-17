@@ -52,7 +52,7 @@ const featuredRecipes = [
 
 function HomePage() {
    useEffect(() => {
-      AOS.init({ duration: 1000, once: false });
+      AOS.init({ duration: 800, once: false });
     }, []);
   return (
     <>
