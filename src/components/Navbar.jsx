@@ -5,6 +5,7 @@ import DarkMode from "./DarkMode";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,7 +28,7 @@ export default function Navbar() {
       }, []);
 
   return (
-    <nav data-aos="fade-up" className="bg-white shadow-md dark:bg-gray-900">
+    <nav data-aos="fade-up" className="fixed top-0 left-0 w-full z-50 bg-white shadow-md dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <div data-aos="fade-up" className="flex justify-between items-center h-16">
           {/* Logo */}
