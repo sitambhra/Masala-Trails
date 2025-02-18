@@ -14,7 +14,7 @@ const Recipes = () => {
   }, []);
   return (
     <div data-aos="fade-up" className="container mx-auto mt-10">
-      <h2 data-aos="fade-up" className="text-3xl font-bold text-yellow-500 mb-6">All Recipes</h2>
+      <h2 data-aos="fade-up" className="text-3xl font-bold text-yellow-500 mb-6 "style={{marginTop:"75px"}}>All Recipes</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {recipes.map((recipe) => (
           <div data-aos="fade-up" key={recipe.id} className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
