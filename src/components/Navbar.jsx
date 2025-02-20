@@ -27,7 +27,9 @@ export default function Navbar() {
       }, []);
 
   return (
-    <nav data-aos="fade-up" className="bg-white shadow-md dark:bg-gray-900">
+
+    <nav className="bg-white shadow-md dark:bg-gray-800">
+
       <div className="max-w-7xl mx-auto px-4">
         <div data-aos="fade-up" className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -51,11 +53,33 @@ export default function Navbar() {
           </button>
 
           {/* Navigation Links (Desktop) */}
-          <div data-aos="fade-up" className="hidden md:flex items-center space-x-8 ml-auto">           
-            <Link to="" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Home</Link>
-            <Link to="/recipes" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Recipes</Link>
-            <Link to="/Categories"  className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Categories</Link>
-            <Link to="/latest" className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white">Latest</Link>
+
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
+            <Link
+              to=""
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+            >
+              Home
+            </Link>
+            <Link
+              to="/recipes"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+            >
+              Recipes
+            </Link>
+            <Link
+              to="/Categories"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+            >
+              Categories
+            </Link>
+            <Link
+              to="/latest"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+            >
+              Latest
+            </Link>
+
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
@@ -79,9 +103,8 @@ export default function Navbar() {
           </div>
 
           <div className="ml-10">
-          <DarkMode/>
+            <DarkMode />
           </div>
-            
         </div>
 
         {/* Mobile Menu */}
