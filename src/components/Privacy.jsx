@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
       AOS.init({ duration: 600, once: false });
     }, []);
   return (
-    <div data-aos="fade-up" className="min-h-screen bg-gradient-to-r from-orange-100 to-yellow-200 text-gray-800 py-10 px-5 md:px-20">
+    <div data-aos="fade-up" className="min-h-screen bg-gradient-to-r from-orange-100 to-yellow-200 text-gray-800  px-5 py-12 md:px-20 my-14">
       <div data-aos="fade-up" className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-8">
         <h1 data-aos="fade-up" className="text-4xl font-bold text-orange-600 text-center mb-6">
           Privacy Policy

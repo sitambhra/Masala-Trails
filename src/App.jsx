@@ -95,22 +95,28 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/recipes" element={<RecipesPage />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/latest" element={<Latest />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/submit" element={<Submit />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-        </Routes>
+        
+        {/* Main content area grows to push footer down */}
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/recipes" element={<RecipesPage />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/latest" element={<Latest />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/submit" element={<Submit />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+          </Routes>
+        </div>
+
         <Footer />
+
         <ScrollToTop
           smooth
           style={{
@@ -138,5 +144,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

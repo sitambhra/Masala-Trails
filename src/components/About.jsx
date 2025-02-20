@@ -7,7 +7,7 @@ const About = () => {
       AOS.init({ duration: 600, once: false });
     }, []);
   return (
-    <div data-aos="fade-up" className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6 dark:bg-gray-900  ">
+    <div data-aos="fade-up" className="bg-gradient-to-r from-orange-400 to-yellow-300 min-h-screen flex items-center justify-center p-6 dark:bg-gray-900  my-14">
       <div data-aos="fade-up" className="max-w-4xl bg-white p-8 rounded-2xl shadow-2xl dark:bg-gray-900">
         <h1 data-aos="fade-up"  className="text-4xl font-bold text-center text-gray-800 mb-4 dark:text-white">
           About Our Recipe World
