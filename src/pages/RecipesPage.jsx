@@ -1,4 +1,8 @@
-import React from "react";
+
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const recipes = [
   {
@@ -20,7 +24,11 @@ const recipes = [
 ];
 
 const Recipes = () => {
+  useEffect(() => {
+    AOS.init({ duration: 600, once: false });
+  }, []);
   return (
+
     <div className="min-h-screen flex flex-col">
       <div className="container mx-auto mt-10">
         <h2 className="text-3xl font-bold text-yellow-500 mb-6">All Recipes</h2>
@@ -37,6 +45,7 @@ const Recipes = () => {
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

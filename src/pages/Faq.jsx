@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqData = [
   {
@@ -49,7 +51,12 @@ const Faq = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  useEffect(() => {
+      AOS.init({ duration: 600, once: false });
+    }, []);
+
   return (
+
     <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10 mb-10">
       <h2 className="text-center text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 ">
         Frequently Asked Questions
@@ -61,6 +68,7 @@ const Faq = () => {
         >
           <div
             className="flex justify-between items-center text-lg font-semibold text-gray-800 dark:text-gray-100 cursor-pointer hover:text-blue-800 dark:hover:text-blue-400 transition duration-300"
+
             onClick={() => handleToggle(index)}
           >
             {item.question}
