@@ -56,14 +56,19 @@ const Faq = () => {
     }, []);
 
   return (
-    <div data-aos="fade-up" className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md my-12">
-      <h2 data-aos="fade-up" className="text-center text-3xl font-bold text-gray-800 mb-6 my-14">
+
+    <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10 mb-10">
+      <h2 className="text-center text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 ">
         Frequently Asked Questions
       </h2>
       {faqData.map((item, index) => (
-        <div data-aos="fade-up" key={index} className="border-b border-gray-300 py-4">
-          <div data-aos="fade-up"
-            className="flex justify-between items-center text-lg font-semibold text-black-600 cursor-pointer hover:text-blue-800 transition duration-300"
+        <div
+          key={index}
+          className="border-b border-gray-300 dark:border-gray-600 py-4 "
+        >
+          <div
+            className="flex justify-between items-center text-lg font-semibold text-gray-800 dark:text-gray-100 cursor-pointer hover:text-blue-800 dark:hover:text-blue-400 transition duration-300"
+
             onClick={() => handleToggle(index)}
           >
             {item.question}
@@ -72,7 +77,7 @@ const Faq = () => {
             </span>
           </div>
           {activeIndex === index && (
-            <div className="mt-2 text-gray-700 text-base leading-relaxed">
+            <div className="mt-2 text-gray-700 dark:text-gray-400 text-base leading-relaxed">
               {item.answer}
             </div>
           )}
