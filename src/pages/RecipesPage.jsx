@@ -1,8 +1,5 @@
-
-import React, { useEffect } from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
-
+import React, { useState } from "react";
+import { FaBookmark } from "react-icons/fa";
 
 const recipes = [
   {
@@ -24,20 +21,41 @@ const recipes = [
 ];
 
 const Recipes = () => {
-  useEffect(() => {
-    AOS.init({ duration: 600, once: false });
-  }, []);
-  return (
+  const [bookmarked, setBookmarked] = useState({});
+  const [alert, setAlert] = useState(false);
 
-    <div className="min-h-screen flex flex-col">
+  const toggleBookmark = (id) => {
+    setBookmarked((prev) => {
+      const newStatus = !prev[id];
+      if (newStatus) {
+        setAlert(true);
+        setTimeout(() => {
+          setAlert(false);
+        }, 1000);
+      }
+      return { ...prev, [id]: newStatus };
+    });
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <div className="container mx-auto mt-10">
         <h2 className="text-3xl font-bold text-yellow-500 mb-6">All Recipes</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recipes.map((recipe) => (
             <div
               key={recipe.id}
-              className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
+              className="relative p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
             >
+              {/* Bookmark Button */}
+              <button
+                onClick={() => toggleBookmark(recipe.id)}
+                className={`absolute top-4 right-4 p-2 rounded-full shadow transition duration-300 ${
+                  bookmarked[recipe.id] ? "bg-yellow-500" : "bg-blue-600"
+                }`}
+              >
+                <FaBookmark className="text-xl text-white" />
+              </button>
               <h3 className="text-xl font-semibold text-gray-800">
                 {recipe.name}
               </h3>
@@ -45,8 +63,12 @@ const Recipes = () => {
             </div>
           ))}
         </div>
-
       </div>
+      {alert && (
+        <div className="fixed bottom-4 right-4 bg-yellow-500 text-white px-4 py-2 rounded shadow-lg">
+          Saved!
+        </div>
+      )}
     </div>
   );
 };
