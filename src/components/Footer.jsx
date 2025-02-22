@@ -39,6 +39,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  to="/feedback"
+                  className="hover:text-orange-500 transition-colors"
+                >
+                  Feedback
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/privacy"
                   className="hover:text-orange-500 transition-colors"
                 >
