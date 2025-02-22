@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -18,29 +20,42 @@ export default function Signup() {
       return;
     }
 
-    const existingUser = JSON.parse(localStorage.getItem("user"));
-    if (existingUser && existingUser.email === email) {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const existingUser = users.find((user) => user.email === email);
+    if (existingUser) {
       setError("Email already registered. Try logging in!");
       return;
     }
 
     const newUser = { name, email, password };
-    localStorage.setItem("user", JSON.stringify(newUser));
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
     alert("Signup successful! Please log in.");
     navigate("/login"); // Redirect to login page
   };
 
   useEffect(() => {
-        AOS.init({ duration: 600, once: false });
-      }, []);
+    AOS.init({ duration: 600, once: false });
+  }, []);
 
   return (
-    <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 ">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-700 ">
-        <h2 data-aos="fade-up" className="text-2xl font-bold text-center text-gray-800 dark:text-white">
+    <div
+      data-aos="fade-up"
+      className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900"
+    >
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-700">
+        <h2
+          data-aos="fade-up"
+          className="text-2xl font-bold text-center text-gray-800 dark:text-white"
+        >
           Create an Account
         </h2>
-        <p data-aos="fade-up" className="text-gray-500 text-center mb-6 dark:text-white">Sign up to get started</p>
+        <p
+          data-aos="fade-up"
+          className="text-gray-500 text-center mb-6 dark:text-white"
+        >
+          Sign up to get started
+        </p>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
 
@@ -73,26 +88,38 @@ export default function Signup() {
             />
           </div>
 
-          <div data-aos="fade-up" className="mb-4">
+          <div data-aos="fade-up" className="mb-4 relative">
             <label className="block text-gray-700 font-semibold mb-2 dark:text-white">
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Create a password"
-              className="w-full p-3 border rounded-md"
+              className="w-full p-3 border rounded-md pr-10"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <span
+              className="absolute inset-y-0 right-3 top-8 flex items-center cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
           </div>
 
-          <button data-aos="fade-up" className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition">
+          <button
+            data-aos="fade-up"
+            className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition"
+          >
             Sign Up
           </button>
         </form>
 
-        <p data-aos="fade-up" className="text-center text-gray-600 mt-4 dark:text-white">
+        <p
+          data-aos="fade-up"
+          className="text-center text-gray-600 mt-4 dark:text-white"
+        >
           Already have an account?{" "}
           <Link
             to="/login"
