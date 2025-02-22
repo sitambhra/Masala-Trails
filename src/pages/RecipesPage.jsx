@@ -13,8 +13,8 @@ const Recipes = () => {
     AOS.init({ duration: 600, once: false });
   }, []);
   return (
-    <div data-aos="fade-up" className="container mx-auto"style={{marginTop:"105px",marginBottom:"450px"}}>
-      <h2 data-aos="fade-up" className="text-3xl font-bold text-yellow-500 ">All Recipes</h2>
+    <div data-aos="fade-up" className="container mx-auto"style={{marginTop:"105px",marginBottom:"500px"}}>
+      <h2 data-aos="fade-up" className="text-3xl font-bold text-yellow-500 " >All Recipes</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {recipes.map((recipe) => (
           <div data-aos="fade-up" key={recipe.id} className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">

@@ -39,7 +39,7 @@ const Contact = () => {
       AOS.init({ duration: 600, once: false });
     }, []);
   return (
-    <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 mt-20">
+    <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 "style={{marginTop:"61px"}}>
       <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full dark:bg-gray-700 ">
         <h2 data-aos="fade-up" className="text-2xl font-bold text-center text-gray-800 mb-6 dark:text-white">
           Contact Us
