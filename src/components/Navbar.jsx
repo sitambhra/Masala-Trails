@@ -27,7 +27,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav data-aos="fade-up" className="bg-white shadow-md dark:bg-gray-900">
+
+    <nav className="bg-white shadow-md dark:bg-gray-800">
+
       <div className="max-w-7xl mx-auto px-4">
         <div
           data-aos="fade-up"
@@ -58,6 +60,8 @@ export default function Navbar() {
             data-aos="fade-up"
             className="hidden md:flex items-center space-x-8 ml-auto"
           >
+
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             <Link
               to=""
               className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
@@ -88,6 +92,7 @@ export default function Navbar() {
             >
               Users
             </Link>
+
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
