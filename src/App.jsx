@@ -21,6 +21,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import FeedbackForm from "./pages/FeedbackForm";
 import FeedbackList from "./pages/Feedbacklist";
+import Allfeedback from "./pages/AllFeedback";
 
 const featuredRecipes = [
   {
@@ -107,6 +108,7 @@ function HomePage() {
           </div>
         </section>
         <Testimonial />
+        <FeedbackList />
       </main>
     </>
   );
@@ -126,7 +128,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/feedback" element={<FeedbackForm />} />
-          <Route path="/seefeedback" element={<FeedbackList />} />
+          <Route path="/seefeedback" element={<Allfeedback />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
