@@ -17,10 +17,10 @@ export default function RecipeCard({
   return (
     <div
       data-aos="fade-up"
-      className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+      className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group"
     >
       <div data-aos="fade-up" className="h-48 overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-[1.2] transition-all ease-in-out duration-300" />
       </div>
       <div data-oas="fade-up" className="p-4">
         <span className="text-xs font-semibold text-orange-600 uppercase tracking-wider">
