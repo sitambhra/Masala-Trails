@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 export default function Submit() {
   const [formData, setFormData] = useState({
@@ -10,44 +11,57 @@ export default function Submit() {
     servings: "",
     difficulty: "Easy",
     cuisine: "",
-    image: null,
   });
+
+  const [message, setMessage] = useState(""); // Success/Error message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted Recipe:", formData);
-    alert("Recipe submitted successfully!");
-
-    // Reset form after submission
-    setFormData({
-      title: "",
-      ingredients: "",
-      time: "",
-      servings: "",
-      difficulty: "Easy",
-      cuisine: "",
-      image: null,
-    });
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/recipes/submit",
+        formData
+      );
+      setMessage(response.data.message); // Show success message
+      setFormData({
+        title: "",
+        ingredients: "",
+        time: "",
+        servings: "",
+        difficulty: "Easy",
+        cuisine: "",
+      });
+    } catch (error) {
+      setMessage("Failed to submit recipe. Please try again.");
+    }
   };
 
   useEffect(() => {
-      AOS.init({ duration: 600, once: false });
-    }, []);
+    AOS.init({ duration: 600, once: false });
+  }, []);
 
   return (
+    <div
+      data-aos="fade-up"
+      className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300"
+    >
+      <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center">
     <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300 "style={{marginTop:"100px"}}>
       <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 mt-3 text-center">
         Submit Your Recipe
       </h2>
+
+      {message && (
+        <p className="text-center text-lg font-semibold text-green-600">
+          {message}
+        </p>
+      )}
+
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Recipe Name */}
         <div data-aos="fade-up">
@@ -116,13 +130,15 @@ export default function Submit() {
           </select>
         </div>
 
-        {/* Image Upload */}
+        {/* Cuisine */}
         <div data-aos="fade-up">
-          <label className="block font-semibold">Upload Image:</label>
+          <label className="block font-semibold">Cuisine:</label>
           <input
-            type="file"
-            accept="image/*"
-            onChange={handleFileChange}
+            type="text"
+            name="cuisine"
+            value={formData.cuisine}
+            onChange={handleChange}
+            required
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
         </div>
