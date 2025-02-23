@@ -16,38 +16,43 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-orange-500 transition-colors group relative"
                 >
                   About Us
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/contact"
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-orange-500 transition-colors group relative"
                 >
                   Contact
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/faq"
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-orange-500 transition-colors group relative"
                 >
                   FAQ
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/privacy"
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-orange-500 transition-colors group relative"
                 >
                   Privacy Policy
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <a href="#" className="hover:text-orange-500 transition-colors group relative">
                   Terms of Service
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
                 </a>
               </li>
             </ul>
