@@ -57,45 +57,52 @@ export default function Navbar() {
 
           {/* Navigation Links (Desktop) */}
 
-          <div className="hidden md:flex items-center space-x-8 ml-auto">
+          <div  className="hidden md:flex items-center space-x-8 ml-auto ">
             <Link
               to=""
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
-            >
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative"
+            > 
               Home
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
+           
             <Link
               to="/recipes"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative"
             >
               Recipes
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             <Link
               to="/Categories"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative"
             >
               Categories
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             <Link
               to="/latest"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative"
             >
               Latest
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
 
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
-                className="text-gray-600 hover:text-red-500 transition-colors dark:text-white"
+                className="text-gray-600 hover:text-red-500 transition-colors dark:text-white group relative"
               >
                 Logout
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
               </button>
             ) : (
               <Link
                 to="/login"
-                className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+                className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative"
               >
                 Login
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
               </Link>
             )}
             <Link to="/submit">
@@ -112,44 +119,50 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden flex flex-col space-y-4 p-4 bg-white shadow-lg rounded-lg dark:bg-gray-900">
+          <div className="md:hidden flex flex-col space-y-4 p-4 bg-white shadow-lg rounded-lg dark:bg-gray-900 ">
             <Link
               to="/"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative w-fit"
             >
               Home
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             <Link
               to="/recipes"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative w-fit"
             >
               Recipes
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             <Link
               to="/categories"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative w-fit"
             >
               Categories
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             <Link
               to="/latest"
-              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+              className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative w-fit"
             >
               Latest
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
             </Link>
             {isAuthenticated ? (
               <button
                 onClick={handleLogout}
-                className="text-gray-600 hover:text-red-500 transition-colors dark:text-white"
+                className="text-gray-600 hover:text-red-500 transition-colors dark:text-white group relative w-fit"
               >
                 Logout
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
               </button>
             ) : (
               <Link
                 to="/login"
-                className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white"
+                className="text-gray-600 hover:text-orange-500 transition-colors dark:text-white group relative w-fit"
               >
                 Login
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-500 group-hover:w-full"></span>
               </Link>
             )}
             <Link to="/submit">
