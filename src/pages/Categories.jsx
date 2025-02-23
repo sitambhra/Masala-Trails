@@ -49,7 +49,7 @@ function Categories() {
   return (
     <div data-aos="fade-up" className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 ">
       <div  className="max-w-7xl mx-auto">
-        <h1 data-aos="fade-up" className="text-4xl font-bold text-gray-900 mb-8">Recipe Categories</h1>
+        <h1 data-aos="fade-up" className="text-4xl font-bold text-gray-900 mb-8"style={{marginTop:"65px"}}>Recipe Categories</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (

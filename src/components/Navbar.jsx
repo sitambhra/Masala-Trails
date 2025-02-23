@@ -28,7 +28,9 @@ export default function Navbar() {
 
   return (
 
-    <nav className="bg-white shadow-md dark:bg-gray-800">
+
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md dark:bg-gray-800">
+
 
       <div className="max-w-7xl mx-auto px-4">
         <div data-aos="fade-up" className="flex justify-between items-center h-16">

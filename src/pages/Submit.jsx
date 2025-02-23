@@ -44,8 +44,8 @@ export default function Submit() {
     }, []);
 
   return (
-    <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300">
-      <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 text-center">
+    <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300 "style={{marginTop:"100px"}}>
+      <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 mt-3 text-center">
         Submit Your Recipe
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">

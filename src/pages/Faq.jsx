@@ -57,7 +57,8 @@ const Faq = () => {
 
   return (
 
-    <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10 mb-10">
+
+    <div className="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-md mt-10 mb-10 "style={{marginTop:"100px"}}>
       <h2 className="text-center text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 ">
         Frequently Asked Questions
       </h2>
