@@ -43,6 +43,7 @@ export default function Navbar() {
           </Link>
 
           {/* Toggle Button for Mobile */}
+          <div className="flex justify-center items-center gap-3 md:gap-10">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -103,9 +104,9 @@ export default function Navbar() {
               </button>
             </Link>
           </div>
-
-          <div className="ml-10">
+          <div>
             <DarkMode />
+          </div>
           </div>
         </div>
 
