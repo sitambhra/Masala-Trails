@@ -1,4 +1,11 @@
 import { Link } from "react-router-dom";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6 mt-0">
@@ -71,6 +78,23 @@ export default function Footer() {
               <button className="bg-orange-500 px-4 py-2 rounded-r-md hover:bg-orange-600 transition-colors">
                 Subscribe
               </button>
+            </div>
+             <div className="flex  gap-4 mt-7 justify-center">
+           <a href="#">
+                <FaGithub className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(0,0,0,0.6)] hover:text-white" />
+            </a>
+            <a href="#">
+                <FaInstagram className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(255,105,180,0.6)] hover:text-[#FF69B4]" />
+            </a>
+              <a href="">
+                <FaFacebook className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(59,89,152,0.6)] hover:text-[#1877F2]" />
+              </a>
+              <a href="#">
+                <FaDiscord className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(114,137,218,0.6)] hover:text-[#5865F2]" />
+              </a>
+             <a href="#">
+                <FaLinkedin className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(0,119,181,0.6)] hover:text-[#0077B5]" />
+              </a>
             </div>
           </div>
         </div>
