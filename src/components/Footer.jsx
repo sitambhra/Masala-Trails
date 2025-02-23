@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CopyrightYear from "./CopyrightYear";
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6 mt-0">
@@ -70,6 +71,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+        <CopyrightYear/>
     </footer>
   );
 }
