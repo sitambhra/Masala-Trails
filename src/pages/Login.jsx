@@ -34,15 +34,10 @@ export default function Login() {
   }, []);
 
   return (
-    <div
-      data-aos="fade-up"
-      className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900"
-    >
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-700">
-        <h2
-          data-aos="fade-up"
-          className="text-2xl font-bold text-center text-gray-800 dark:text-white"
-        >
+    <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 ">
+      <div  className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full dark:bg-gray-700 "style={{marginTop:"120px"}}>
+        <h2 data-aos="fade-up" className="text-2xl font-bold text-center text-gray-800 dark:text-white">
+
           Welcome Back
         </h2>
         <p

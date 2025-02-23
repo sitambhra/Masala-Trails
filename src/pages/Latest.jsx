@@ -37,7 +37,7 @@ function Latest() {
   return (
     <div data-aos="fade-up" className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 ">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Latest Recipes</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-8"style={{marginTop:"61px"}} >Latest Recipes</h1>
         
         <div data-aos="fade-up" className="space-y-8">
           {latestRecipes.map((recipe) => (
