@@ -6,7 +6,7 @@ const CopyrightYear = () => {
 
   return (
     <div className="w-full flex justify-center item-center p-4 mt-8">
-      <p className='text-xl text-white'>&copy; {currentYear} Masala Trails || All rights reserved.</p>
+      <p className='text-md text-gray-400'>&copy; {currentYear} Masala Trails&trade; || All Rights Reserved.</p>
     </div>
   );
 };
