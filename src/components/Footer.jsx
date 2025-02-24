@@ -80,7 +80,7 @@ export default function Footer() {
               </button>
             </div>
              <div className="flex  gap-4 mt-7 justify-center">
-           <a href="#">
+           <a href="https://github.com/sitambhra/Masala-Trails">
                 <FaGithub className="w-6 h-6 transition duration-300 ease-in-out hover:scale-125 hover:rotate-[10deg] hover:shadow-[4px_4px_10px_rgba(0,0,0,0.6)] hover:text-white" />
             </a>
             <a href="#">
