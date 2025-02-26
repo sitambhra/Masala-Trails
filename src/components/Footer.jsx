@@ -101,6 +101,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+         <hr className="my-5 border-gray-600 sm:mx-auto dark:border-gray-700 lg:my-6" />
         <CopyrightYear/>
     </footer>
   );
