@@ -15,6 +15,7 @@ export default function RecipeCard({
     AOS.init({ duration: 600, once: false });
   }, []);
   return (
+    <div className="hover:scale-[1.04] transition-all ease-in-out duration-300">
     <div
       data-aos="fade-up"
       className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group"
@@ -42,6 +43,7 @@ export default function RecipeCard({
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
