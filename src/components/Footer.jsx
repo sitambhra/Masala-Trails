@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CopyrightYear from "./CopyrightYear";
 import {
   FaDiscord,
   FaFacebook,
@@ -6,6 +7,7 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6 mt-0">
@@ -99,6 +101,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+         <hr className="my-5 border-gray-600 sm:mx-auto dark:border-gray-700 lg:my-6" />
+        <CopyrightYear/>
     </footer>
   );
 }
