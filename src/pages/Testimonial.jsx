@@ -79,12 +79,12 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div data-aos="fade-up" className="flex flex-col items-center justify-center w-full my-12  py-12">
+    <div data-aos="fade-up" className="flex flex-col items-center justify-center w-full my-12  py-12 hover:scale-[1.04] ">
       {/* Added Section Heading */}
       <h2 data-aos="fade-up" className="text-3xl font-bold text-orange-700 mb-6">
         What Our Customers Say
       </h2>
-      <div className="flex items-center w-4/5 justify-center">
+      <div className="flex items-center w-4/5 justify-center transition-transform duration-300 hover:scale-105 group">
         <button
           className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
           onClick={nextTestimonial}
@@ -98,7 +98,7 @@ const Testimonial = () => {
             .map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-[250px] h-[300px] flex flex-col justify-center items-center"
+                className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-[250px] h-[300px] flex flex-col justify-center items-center hover:scale-[1.1] transition-all ease-in-out duration-300"
               >
                 <img
                   src={testimonial.image}
