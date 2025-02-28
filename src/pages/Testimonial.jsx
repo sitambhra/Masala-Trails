@@ -84,7 +84,7 @@ const Testimonial = () => {
       <h2 data-aos="fade-up" className="text-3xl font-bold text-orange-700 mb-6">
         What Our Customers Say
       </h2>
-      <div className="flex items-center w-4/5 justify-center">
+      <div className="flex items-center w-4/5 cursor-pointer justify-center">
         <button
           className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
           onClick={nextTestimonial}
