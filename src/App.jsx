@@ -62,7 +62,10 @@ function HomePage() {
           <h2 className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
             Featured Recipes
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {featuredRecipes.map((recipe, index) => (
               <RecipeCard key={index} {...recipe} />
             ))}
