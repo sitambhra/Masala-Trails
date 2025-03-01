@@ -86,7 +86,7 @@ const Testimonial = () => {
       </h2>
       <div className="flex items-center w-4/5 cursor-pointer justify-center">
         <button
-          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4 dark:bg-[#374151] dark:text-[#fff]"
           onClick={nextTestimonial}
         >
           &lt;
@@ -115,7 +115,7 @@ const Testimonial = () => {
         </div>
 
         <button
-          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4 dark:bg-[#374151] dark:text-[#fff]"
           onClick={nextTestimonial}
         >
           &gt;
