@@ -52,34 +52,34 @@ const featuredRecipes = [
 
 function HomePage() {
    useEffect(() => {
-      AOS.init({ duration: 800, once: false });
+      AOS.init({ duration: 100, once: true });
     }, []);
   return (
     <>
       <Hero />
       <main className="max-w-7xl mx-auto px-4 py-12 dark:bg-gray-900">
         <section>
-          <h2 data-aos="fade-up" className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
             Featured Recipes
           </h2>
-          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredRecipes.map((recipe, index) => (
               <RecipeCard key={index} {...recipe} />
             ))}
           </div>
         </section>
-        <section className="mt-16">
-          <div data-aos="fade-up" className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
+        <section className="mt-16 hover:scale-[1.1] transition-all ease-in-out duration-300">
+          <div className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 data-aos="fade-up" className="text-3xl font-bold text-gray-800 mb-4 dark:text-white ">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white ">
                 Share Your Recipe
               </h2>
-              <p data-aos="fade-up" className="text-gray-600 mb-6 dark:text-white">
+              <p className="text-gray-600 mb-6 dark:text-white">
                 Join our community of food lovers and share your favorite
                 recipes with the world.
               </p>
               <Link to="/submit">
-                <button data-aos="fade-up" className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
+                <button className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-colors">
                   Submit Your Recipe
                 </button>
               </Link>
