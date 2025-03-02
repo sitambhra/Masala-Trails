@@ -75,7 +75,7 @@ const Testimonial = () => {
   const renderStars = (rating) => "⭐".repeat(rating);
 
   useEffect(() => {
-    AOS.init({ duration: 100, once: true});
+    AOS.init({ duration: 100, once: true });
   }, []);
 
   return (

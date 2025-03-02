@@ -51,9 +51,9 @@ const featuredRecipes = [
 ];
 
 function HomePage() {
-   useEffect(() => {
-      AOS.init({ duration: 100, once: true });
-    }, []);
+  useEffect(() => {
+    AOS.init({ duration: 100, once: true });
+  }, []);
   return (
     <>
       <Hero />
@@ -97,7 +97,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
         <Navbar />
-        
+
         {/* Main content area grows to push footer down */}
         <div className="flex-grow">
           <Routes>
@@ -144,6 +144,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
