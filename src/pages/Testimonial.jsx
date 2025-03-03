@@ -84,9 +84,9 @@ const Testimonial = () => {
       <h2 data-aos="fade-up" className="text-3xl font-bold text-orange-700 mb-6">
         What Our Customers Say
       </h2>
-      <div className="flex items-center w-4/5 justify-center">
+      <div className="flex items-center w-4/5 cursor-pointer justify-center">
         <button
-          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4 dark:bg-[#374151] dark:text-[#fff]"
           onClick={nextTestimonial}
         >
           &lt;
@@ -98,7 +98,7 @@ const Testimonial = () => {
             .map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-[250px] h-[300px] flex flex-col justify-center items-center"
+                className="bg-white p-6 rounded-lg shadow-lg text-center flex-shrink-0 w-[250px] h-[300px] flex flex-col justify-center items-center hover:scale-[1.1] transition-all ease-in-out duration-300 dark:bg-[#374151] dark:text-white"
               >
                 <img
                   src={testimonial.image}
@@ -109,13 +109,13 @@ const Testimonial = () => {
                   {renderStars(testimonial.rating)}
                 </p>
                 <h3 className="text-lg font-bold">{testimonial.name}</h3>
-                <p className="text-gray-600">{testimonial.review}</p>
+                <p className="text-gray-600 dark:text-gray-300">{testimonial.review}</p>
               </div>
             ))}
         </div>
 
         <button
-          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4"
+          className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4 dark:bg-[#374151] dark:text-[#fff]"
           onClick={nextTestimonial}
         >
           &gt;
