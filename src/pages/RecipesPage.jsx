@@ -14,7 +14,7 @@ const Recipes = () => {
   const [alert, setAlert] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 600, once: false });
+    AOS.init({ duration: 100, once: true });
   }, []);
 
   const toggleBookmark = (id) => {

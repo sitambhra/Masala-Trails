@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-        AOS.init({ duration: 600, once: false });
+        AOS.init({ duration: 100, once: true });
       }, []);
 
   return (

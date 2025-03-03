@@ -30,7 +30,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    AOS.init({ duration: 600, once: false });
+    AOS.init({ duration: 100, once: true });
   }, []);
 
   return (
