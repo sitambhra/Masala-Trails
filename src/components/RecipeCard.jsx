@@ -15,12 +15,12 @@ export default function RecipeCard({
     AOS.init({ duration: 100, once: true });
   }, []);
   return (
-    <div className="hover:scale-[1.04] transition-all ease-in-out duration-300">
+    <div className="w-full hover:scale-[1.04] transition-all ease-in-out duration-300">
       <div
         data-aos="fade-up"
-        className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group dark:bg-[#374151]"
+        className="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group dark:bg-[#374151]"
       >
-        <div className="h-48 overflow-hidden">
+        <div className=" w-full h-48 overflow-hidden">
           <img
             src={image}
             alt={title}
@@ -35,10 +35,10 @@ export default function RecipeCard({
           <h3 className="mt-2 text-xl font-bold text-gray-800">{title}</h3>
           <div className="mt-4 flex items-center justify-between text-gray-600">
             <div className="flex items-center space-x-1">
-              <h3 className="mt-2 text-xl font-bold text-gray-800 dark:text-gray-50">
+              {/* <h3 className="mt-2 text-xl font-bold text-gray-800 dark:text-gray-50">
                 {title}
-              </h3>
-              <div className="mt-4 flex items-center justify-between text-gray-600 dark:text-gray-300">
+              </h3> */}
+              <div className="gap-16 flex items-center justify-between text-gray-600 dark:text-gray-300">
                 <div data-aos="fade-up" className="flex items-center space-x-1">
                   <Clock size={16} />
                   <span className="text-sm">{time}</span>

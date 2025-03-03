@@ -64,14 +64,14 @@ function HomePage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
+            {/* <div
               data-aos="fade-up"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 "
-            >
+            > */}
               {featuredRecipes.map((recipe, index) => (
                 <RecipeCard key={index} {...recipe} />
               ))}
-            </div>
+            {/* </div> */}
           </div>
         </section>
         <section className="mt-16 hover:scale-[1.1] transition-all ease-in-out duration-300">
