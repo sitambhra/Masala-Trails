@@ -92,7 +92,7 @@ const Testimonial = () => {
           &lt;
         </button>
 
-        <div data-aos="fade-up" className="flex gap-6 justify-center w-full overflow-hidden">
+        <div data-aos="fade-up" className="flex gap-6 justify-center w-full overflow-visible">
           {testimonials
             .slice(index, index + visibleCount)
             .map((testimonial) => (
