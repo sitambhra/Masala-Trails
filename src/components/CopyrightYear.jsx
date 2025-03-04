@@ -6,7 +6,7 @@ const CopyrightYear = () => {
 
   return (     
     <div className="w-full flex justify-center item-center p-2">
-      <p className='text-md text-gray-400'>&copy; {currentYear} <a href='https://masala-trails.vercel.app/'>Masala Trails&trade;</a>. All Rights Reserved.</p>
+      <p className='text-sm sm:text-base md:text-base lg:text-lg text-gray-400'>&copy; {currentYear} <a href='https://masala-trails.vercel.app/'>Masala Trails&trade;</a>. All Rights Reserved.</p>
     </div>
   );
 };
