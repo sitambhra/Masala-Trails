@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import { FiArrowUp } from "react-icons/fi";
@@ -19,6 +19,7 @@ import Footer from "./components/Footer";
 import Testimonial from "./pages/Testimonial";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Loader from "./components/Loader";
 
 const featuredRecipes = [
   {
@@ -93,13 +94,24 @@ function HomePage() {
 }
 
 function App() {
+  const [showimg, setShowimg] = useState(true);
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setShowimg(!showimg);
+      }, 1000);
+      return () => clearInterval(interval);
+    }, []);
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
+        <div className="flex-grow">{
+          showimg ? (
+            <Loader/>
+          ) : null}
+
         <Navbar />
         
         {/* Main content area grows to push footer down */}
-        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/recipes" element={<RecipesPage />} />
