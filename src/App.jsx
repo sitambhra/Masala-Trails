@@ -98,7 +98,7 @@ function App() {
     useEffect(() => {
       const interval = setInterval(() => {
         setShowimg(!showimg);
-      }, 1000);
+      }, 2000);
       return () => clearInterval(interval);
     }, []);
   return (

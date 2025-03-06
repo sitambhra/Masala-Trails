@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@lottiefiles/dotlottie-react": "^0.13.0",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "aos": "^2.3.4",
     "dotenv": "^16.4.7",
     "lucide-react": "^0.473.0",
