@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Login() {
@@ -29,9 +29,9 @@ export default function Login() {
     navigate("/"); // Redirect to home or protected page
   };
 
-  useEffect(() => {
-    AOS.init({ duration: 600, once: false });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
 
   return (
     <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 ">

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Search } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const recipes = ["Butter Chicken", "Pad Thai", "Margherita Pizza"];
 
@@ -28,13 +28,13 @@ export default function Hero() {
     setFilteredRecipes([]); // Hide suggestions after selection
   };
 
-  useEffect(() => {
-    AOS.init({ duration: 600, once: false });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
 
   return (
-    <div data-aos="fade-up" className="relative h-[500px] flex items-center justify-center">
-      <div data-aos="fade-up"
+    <div className="relative h-[500px] flex items-center justify-center">
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
@@ -46,16 +46,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
-      <div data-aos="fade-up" className="relative z-10 text-center px-4">
-        <h1 data-aos="fade-up" className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <div  className="relative z-10 text-center px-4 animate-fadeIn">
+        <h1  className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
           Masala Trails
         </h1>
-        <p data-aos="fade-up" className="text-xl text-white mb-8 max-w-2xl mx-auto">
+        <p  className="text-xl text-white mb-8 max-w-2xl mx-auto">
           Discover authentic recipes from around the world, crafted with love
           and tradition.
         </p>
 
-        <div data-aos="fade-up" className="max-w-xl mx-auto">
+        <div  className="max-w-xl mx-auto">
           <div className="relative">
             <input
               type="text"

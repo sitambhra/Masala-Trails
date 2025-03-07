@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function Submit() {
   const [formData, setFormData] = useState({
@@ -39,9 +39,9 @@ export default function Submit() {
     });
   };
 
-  useEffect(() => {
-      AOS.init({ duration: 600, once: false });
-    }, []);
+  // useEffect(() => {
+  //     AOS.init({ duration: 100, once: true });
+  //   }, []);
 
   return (
     <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300 "style={{marginTop:"100px"}}>

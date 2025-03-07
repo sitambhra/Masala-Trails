@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { UtensilsCrossed, Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import DarkMode from "./DarkMode";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +22,9 @@ export default function Navbar() {
     navigate("/login"); // Redirect to login page after logout
   };
 
-  useEffect(() => {
-        AOS.init({ duration: 600, once: false });
-      }, []);
+  // useEffect(() => {
+  //       AOS.init({ duration: 100, once: true });
+  //     }, []);
 
   return (
 
@@ -33,7 +33,7 @@ export default function Navbar() {
 
 
       <div className="max-w-7xl mx-auto px-4">
-        <div data-aos="fade-up" className="flex justify-between items-center h-16">
+        <div  className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <UtensilsCrossed className="h-8 w-8 text-orange-500" />
