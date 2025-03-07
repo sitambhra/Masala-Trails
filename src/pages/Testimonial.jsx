@@ -127,6 +127,7 @@ const Testimonial = () => {
         </button>
       </div>
     </div>
+    </div>
   );
 };
 
