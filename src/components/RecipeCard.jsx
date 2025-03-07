@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Clock, Users, ChefHat } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default function RecipeCard({
   title,
@@ -11,14 +11,13 @@ export default function RecipeCard({
   difficulty,
   cuisine,
 }) {
-  useEffect(() => {
-    AOS.init({ duration: 100, once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
   return (
-    <div className="w-full hover:scale-[1.04] transition-all ease-in-out duration-300">
+    <div className="w-full hover:scale-[1.04] transition-all ease-in-out duration-300 animate-fadeIn">
       <div
-        data-aos="fade-up"
-        className="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group dark:bg-[#374151]"
+        className="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group dark:bg-[#374151] animate-fadeIn"
       >
         <div className=" w-full h-48 overflow-hidden">
           <img
@@ -39,7 +38,7 @@ export default function RecipeCard({
                 {title}
               </h3> */}
               <div className="gap-16 flex items-center justify-between text-gray-600 dark:text-gray-300">
-                <div data-aos="fade-up" className="flex items-center space-x-1">
+                <div className="flex items-center space-x-1">
                   <Clock size={16} />
                   <span className="text-sm">{time}</span>
                 </div>

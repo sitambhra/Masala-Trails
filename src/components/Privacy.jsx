@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const PrivacyPolicy = () => {
-  useEffect(() => {
-    AOS.init({ duration: 100, once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
   return (
     <div className="min-h-screen bg-gradient-to-r from-orange-100 to-yellow-200 dark:from-gray-900 dark:to-gray-900 dark:text-gray-100 py-10 px-5 md:px-20 mt-14">
       <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 dark:text-gray-300 shadow-lg rounded-xl p-8">

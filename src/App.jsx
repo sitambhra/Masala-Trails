@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import { FiArrowUp } from "react-icons/fi";
@@ -17,8 +17,8 @@ import About from "./components/About";
 import PrivacyPolicy from "./components/Privacy";
 import Footer from "./components/Footer";
 import Testimonial from "./pages/Testimonial";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const featuredRecipes = [
   {
@@ -51,15 +51,15 @@ const featuredRecipes = [
 ];
 
 function HomePage() {
-  useEffect(() => {
-    AOS.init({ duration: 100, once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
   return (
     <>
       <Hero />
       <main className="max-w-7xl mx-auto px-4 py-12 dark:bg-gray-900">
         <section>
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 dark:text-white animate-fadeIn">
             Featured Recipes
           </h2>
 
@@ -74,7 +74,7 @@ function HomePage() {
             {/* </div> */}
           </div>
         </section>
-        <section className="mt-16 hover:scale-[1.1] transition-all ease-in-out duration-300">
+        <section className="mt-16 hover:scale-[1.1] transition-all ease-in-out duration-300 animate-fadeIn">
           <div className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white ">

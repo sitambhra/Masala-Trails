@@ -4,8 +4,8 @@ import man2 from "../assets/man2.jpeg";
 import woman1 from "../assets/woman1.jpeg";
 import woman3 from "../assets/woman3.jpeg";
 import chef1 from "../assets/chef1.jpeg";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -74,9 +74,9 @@ const Testimonial = () => {
   // Function to generate star rating
   const renderStars = (rating) => "⭐".repeat(rating);
 
-  useEffect(() => {
-    AOS.init({ duration: 100, once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full my-12  py-12">

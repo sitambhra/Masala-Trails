@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function Signup() {
@@ -34,9 +34,9 @@ export default function Signup() {
     navigate("/login"); // Redirect to login page
   };
 
-  useEffect(() => {
-    AOS.init({ duration: 100, once: true });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100, once: true });
+  // }, []);
 
   return (
     <div

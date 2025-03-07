@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const faqData = [
   {
@@ -51,9 +51,9 @@ const Faq = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  useEffect(() => {
-      AOS.init({ duration: 100, once: true });
-    }, []);
+  // useEffect(() => {
+  //     AOS.init({ duration: 100, once: true });
+  //   }, []);
 
   return (
 
