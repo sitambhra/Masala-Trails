@@ -94,7 +94,7 @@ const Testimonial = () => {
 
         <div className="flex gap-6 justify-center w-full overflow-hidden">
 
-        <div data-aos="fade-up" className="flex gap-6 justify-center w-full overflow-visible">
+        <div  className="flex gap-6 justify-center w-full overflow-visible">
 
           {testimonials
             .slice(index, index + visibleCount)
@@ -118,6 +118,7 @@ const Testimonial = () => {
               </div>
             ))}
         </div>
+        </div>
 
         <button
           className="bg-orange-200 text-orange-700 text-2xl p-3 rounded-lg transition duration-300 hover:bg-orange-300 hover:text-orange-900 ml-4 dark:bg-[#374151] dark:text-[#fff]"
@@ -126,7 +127,6 @@ const Testimonial = () => {
           &gt;
         </button>
       </div>
-    </div>
     </div>
   );
 };
