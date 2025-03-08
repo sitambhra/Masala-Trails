@@ -34,6 +34,10 @@ Masala-Trails is an open-source platform that brings together food lovers, trave
 - User-friendly interface with recipe cards
 - Community engagement through comments and ratings
 
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 ## 🚀 Getting Started
 
 ### **1️⃣ Clone the Repository**
@@ -53,6 +57,9 @@ npm run dev
 ```
 
 Now, visit `http://localhost:3000` to see the project in action! 🎉
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## 🤝 Contributing
 Masala-Trails is open to contributions! Follow these steps to contribute:
@@ -82,6 +89,9 @@ git commit -m "Added a new feature"
 git push origin feature-name
 ```
 Now, go to the original repo and create a **Pull Request (PR)** from your fork.
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
  View Project: https://masala-trails.vercel.app/
  
