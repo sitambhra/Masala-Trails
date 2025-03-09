@@ -4,7 +4,7 @@
 Masala-Trails is an open-source platform that brings together food lovers, travelers, and home chefs to share and explore authentic recipes from around the world. Whether you're looking for a traditional dish or a modern twist, Masala-Trails is your go-to destination!
 
  <!--line-->
- ![image](https://github.com/user-attachments/assets/ec9c537a-9678-4fbe-964e-2627b3f711bf)
+ ![image](https://github.com/user-attachments/assets/bb94fede-bf2d-4661-8775-39b83a0ce1ab)
 
 ## ✨ Features
 - Discover and share recipes
