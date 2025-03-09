@@ -74,7 +74,7 @@ function HomePage() {
             {/* </div> */}
           </div>
         </section>
-        <section className="mt-16 hover:scale-[1.1] transition-all ease-in-out duration-300 animate-fadeIn">
+        <section className="mt-16 transition-all ease-in-out duration-300 animate-fadeIn">
           <div className="bg-orange-50 rounded-2xl p-8 md:p-12 dark:bg-gray-700 ">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white ">

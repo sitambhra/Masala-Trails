@@ -15,7 +15,7 @@ export default function RecipeCard({
   //   AOS.init({ duration: 100, once: true });
   // }, []);
   return (
-    <div className="w-full hover:scale-[1.04] transition-all ease-in-out duration-300 animate-fadeIn">
+    <div className="w-full hover:scale-[1.02] transition-all ease-in-out duration-300 animate-fadeIn">
       <div
         className="w-full bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group dark:bg-[#374151] animate-fadeIn"
       >
