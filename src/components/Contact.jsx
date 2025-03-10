@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const Contact = () => {
   const refForm = useRef(null);
@@ -35,9 +35,9 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-      AOS.init({ duration: 600, once: false });
-    }, []);
+  // useEffect(() => {
+  //     AOS.init({ duration: 100, once: true });
+  //   }, []);
   return (
     <div data-aos="fade-up" className="flex items-center justify-center min-h-screen bg-gray-100 p-4 dark:bg-gray-900 "style={{marginTop:"61px"}}>
       <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full dark:bg-gray-700 ">
@@ -81,7 +81,7 @@ const Contact = () => {
               placeholder="Enter your message"
             ></textarea>
           </div>
-          <button data-aos="fade-up"
+          <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
           >

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const About = () => {
-  useEffect(() => {
-      AOS.init({ duration: 600, once: false });
-    }, []);
+  // useEffect(() => {
+  //     AOS.init({ duration: 100, once: true });
+  //   }, []);
   return (
 
     <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-r from-orange-400 to-yellow-300 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-900">
@@ -45,7 +45,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="text-center mt-6">
+        <div className="text-center mt-6">
           <a
             href="/recipes"
             className="bg-orange-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 transition duration-300"
