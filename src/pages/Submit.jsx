@@ -4,14 +4,16 @@ import "aos/dist/aos.css";
 
 export default function Submit() {
   const [formData, setFormData] = useState({
-    title: "",
-    ingredients: "",
-    time: "",
+    name: "",
+    description: "",
+    cookingTime: "",
     servings: "",
     difficulty: "Easy",
-    cuisine: "",
-    image: null,
+    file: null, // Change image to file
   });
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,55 +21,86 @@ export default function Submit() {
   };
 
   const handleFileChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
+    setFormData({ ...formData, file: e.target.files[0] });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted Recipe:", formData);
-    alert("Recipe submitted successfully!");
+    setLoading(true);
+    setMessage("");
 
-    // Reset form after submission
-    setFormData({
-      title: "",
-      ingredients: "",
-      time: "",
-      servings: "",
-      difficulty: "Easy",
-      cuisine: "",
-      image: null,
-    });
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("description", formData.description);
+    formDataToSend.append("cookingTime", formData.cookingTime);
+    formDataToSend.append("servings", formData.servings);
+    formDataToSend.append("difficulty", formData.difficulty);
+    formDataToSend.append("file", formData.file);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/recipes", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessage("Recipe submitted successfully!");
+        setFormData({
+          name: "",
+          description: "",
+          cookingTime: "",
+          servings: "",
+          difficulty: "Easy",
+          image: null,
+        });
+      } else {
+        setMessage(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setMessage("Error submitting the recipe. Please try again.");
+    }
+
+    setLoading(false);
   };
 
   useEffect(() => {
-      AOS.init({ duration: 600, once: false });
-    }, []);
+    AOS.init({ duration: 600, once: false });
+  }, []);
 
   return (
-    <div data-aos="fade-up" className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300 "style={{marginTop:"100px"}}>
-      <h2 data-aos="fade-up" className="text-3xl font-bold mb-6 mt-3 text-center">
+    <div
+      data-aos="fade-up"
+      className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg dark:bg-gray-300"
+      style={{ marginTop: "100px" }}
+    >
+      <h2
+        data-aos="fade-up"
+        className="text-3xl font-bold mb-6 mt-3 text-center"
+      >
         Submit Your Recipe
       </h2>
+      {message && <p className="text-center text-red-500">{message}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Recipe Name */}
         <div data-aos="fade-up">
           <label className="block font-semibold">Recipe Name:</label>
           <input
             type="text"
-            name="title"
-            value={formData.title}
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
         </div>
 
-        {/* Ingredients */}
+        {/* description */}
         <div data-aos="fade-up">
-          <label className="block font-semibold">Ingredients:</label>
+          <label className="block font-semibold">Description:</label>
           <textarea
-            name="ingredients"
-            value={formData.ingredients}
+            name="description"
+            value={formData.description}
             onChange={handleChange}
             required
             rows="4"
@@ -80,8 +113,8 @@ export default function Submit() {
           <label className="block font-semibold">Cooking Time (mins):</label>
           <input
             type="number"
-            name="time"
-            value={formData.time}
+            name="cookingTime"
+            value={formData.cookingTime}
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -131,9 +164,10 @@ export default function Submit() {
         <div data-aos="fade-up" className="text-center">
           <button
             type="submit"
+            disabled={loading}
             className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition duration-200"
           >
-            Submit Recipe
+            {loading ? "Submitting..." : "Submit Recipe"}
           </button>
         </div>
       </form>
