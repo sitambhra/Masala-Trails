@@ -1,6 +1,7 @@
 import React from 'react';
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Latest() {
   const latestRecipes = [
@@ -30,9 +31,9 @@ function Latest() {
     },
   ];
 
-  // useEffect(() => {
-  //         AOS.init({ duration: 100, once: true });
-  //       }, []);
+  useEffect(() => {
+          AOS.init({ duration: 600, once: true });
+        }, []);
 
   return (
     <div data-aos="fade-up" className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 ">

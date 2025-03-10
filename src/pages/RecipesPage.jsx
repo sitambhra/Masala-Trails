@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import React, {useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaBookmark } from "react-icons/fa";
 
 const recipes = [
@@ -13,9 +13,9 @@ const Recipes = () => {
   const [bookmarked, setBookmarked] = useState({});
   const [alert, setAlert] = useState(false);
 
-  // useEffect(() => {
-  //   AOS.init({ duration: 100, once: true });
-  // }, []);
+  useEffect(() => {
+    AOS.init({ duration: 600, once: true });
+  }, []);
 
   const toggleBookmark = (id) => {
     setBookmarked((prev) => ({

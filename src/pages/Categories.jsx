@@ -43,7 +43,7 @@ function Categories() {
   ];
 
   useEffect(() => {
-        AOS.init({ duration: 100, once: true });
+        AOS.init({ duration: 600, once: true });
       }, []);
 
   return (
